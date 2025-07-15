@@ -1,0 +1,20 @@
+replicaCount: 1
+
+image:
+  repository: kaashntr/blood_is_fuel
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+env:
+  BACKEND_URL: https://app.class-schedule.pp.ua/api
+
+ingress:
+  enabled: true
+  host: app.class-schedule.pp.ua
+  path: /
+  pathType: Prefix
+  entryPoint: web
