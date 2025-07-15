@@ -1,20 +1,20 @@
 replicaCount: 1
 
 image:
-  repository: kaashntr/blood_is_fuel
+  repository: changeme
   tag: latest
   pullPolicy: IfNotPresent
 
 service:
   type: ClusterIP
-  port: 3000
+  port: changeme
 
 env:
-  BACKEND_URL: https://app.class-schedule.pp.ua/api
+  BACKEND_URL: changeme
 
 ingress:
   enabled: true
-  host: app.class-schedule.pp.ua
+  host: changeme
   path: /
   pathType: Prefix
   entryPoint: web
