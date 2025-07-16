@@ -14,7 +14,11 @@ env:
 
 ingress:
   enabled: true
-  host: changeme
+  host: app.example.com
   path: /
   pathType: Prefix
-  entryPoint: web
+  entryPoint: websecure
+  tls:
+    enabled: true
+    secretName: tls-secret
+
