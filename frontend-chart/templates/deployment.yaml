@@ -21,5 +21,7 @@ spec:
         ports:
         - containerPort: {{ .Values.service.port }}
         env:
-        - name: BACKEND_URL
-          value: {{ .Values.env.BACKEND_URL }}
+        {{- range $key, $value := .Values.env }}
+        - name: {{ $key | quote }}
+          value: {{ $value | quote }}
+        {{- end }}

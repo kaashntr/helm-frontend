@@ -8,7 +8,6 @@ image:
 service:
   type: ClusterIP
   port: changeme
-
 env:
   BACKEND_URL: changeme
 
